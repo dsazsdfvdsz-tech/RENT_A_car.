@@ -60,14 +60,14 @@ export function VehicleCard({ vehicle, onOpen, priority = false }: VehicleCardPr
           href={vehicleInquiryLink(vehicle.name)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-whatsapp px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-whatsapp-hover"
+          className="glass-whatsapp glass-sheen inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold"
         >
           <WhatsAppIcon className="h-4 w-4" />
           Inquire
         </a>
         <Link
           href={`/fleet#${vehicle.id}`}
-          className="inline-flex items-center justify-center gap-1 rounded-xl border border-border px-4 py-2.5 text-sm font-semibold text-gold transition-colors hover:border-gold hover:bg-gold-light"
+          className="glass-gold glass-sheen inline-flex items-center justify-center gap-1 rounded-xl px-4 py-2.5 text-sm font-semibold"
         >
           View Details
           <ArrowRight className="h-4 w-4" />

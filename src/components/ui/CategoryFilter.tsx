@@ -43,8 +43,8 @@ export function CategoryFilter({
             {isActive && (
               <motion.span
                 layoutId="category-pill"
-                className="absolute inset-0 rounded-full border border-gold/40 bg-gold-light"
-                transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                className="glass-pill absolute inset-0 rounded-full"
+                transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.6 }}
               />
             )}
           </button>

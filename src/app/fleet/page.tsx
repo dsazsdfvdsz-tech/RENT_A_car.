@@ -107,14 +107,14 @@ export default function FleetPage() {
                     href={vehicleInquiryLink(vehicle.name)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-whatsapp px-5 py-3 font-semibold text-white transition-colors hover:bg-whatsapp-hover"
+                    className="glass-whatsapp glass-sheen inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold"
                   >
                     <WhatsAppIcon className="h-5 w-5" />
                     Inquire on WhatsApp
                   </a>
                   <a
                     href={telLink}
-                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-gold px-5 py-3 font-semibold text-gold transition-colors hover:bg-gold hover:text-black"
+                    className="glass-gold glass-sheen inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold"
                   >
                     <Phone className="h-5 w-5" />
                     Call

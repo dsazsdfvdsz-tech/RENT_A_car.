@@ -56,22 +56,22 @@ export default function AboutPage() {
       <section className="relative overflow-hidden border-b border-border">
         <ParallaxBackground className="absolute inset-0" strength={50}>
           <Image
-            src="/images/misc/wedding-decorated.jpg"
-            alt="Decorated wedding car from Abubakr Chadhar Rent a Car"
+            src="/images/hero/hero-bg.jpg"
+            alt="Abubakr Chadhar Rent a Car premium fleet in Lahore"
             fill
             priority
             sizes="100vw"
             className="object-cover"
           />
         </ParallaxBackground>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50" />
-        <div className="relative z-10 mx-auto max-w-[1320px] px-4 pb-16 pt-32 sm:px-6 lg:px-8 lg:pb-20 lg:pt-40">
-          <FadeInOnScroll className="max-w-2xl">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0908] via-[#0a0908]/82 to-[#0a0908]/60" />
+        <div className="relative z-10 mx-auto max-w-[1320px] px-4 pb-16 pt-32 text-center sm:px-6 lg:px-8 lg:pb-20 lg:pt-40">
+          <FadeInOnScroll className="mx-auto max-w-3xl">
             <p className="eyebrow mb-3">About Us</p>
             <h1 className="text-white">
               26 Years of Trusted Service Since 2000
             </h1>
-            <p className="mt-4 max-w-xl text-slate-300">
+            <p className="mx-auto mt-4 max-w-xl text-slate-300">
               {siteConfig.tagline}
             </p>
           </FadeInOnScroll>
@@ -158,14 +158,14 @@ export default function AboutPage() {
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-7 py-3.5 font-semibold text-white transition-colors hover:bg-whatsapp-hover"
+                className="glass-whatsapp glass-sheen inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 font-semibold"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 WhatsApp Us
               </a>
               <a
                 href={telLink}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-gold px-7 py-3.5 font-semibold text-gold transition-colors hover:bg-gold hover:text-black"
+                className="glass-gold glass-sheen inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 font-semibold"
               >
                 <Phone className="h-5 w-5" />
                 Call Now

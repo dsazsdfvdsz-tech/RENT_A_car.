@@ -32,21 +32,28 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-[1320px] items-center justify-between gap-4 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
-        {/* Brand */}
-        <Link
-          href="/"
-          className="flex shrink-0 items-center font-heading text-lg font-bold tracking-tight sm:text-xl"
-        >
-          <span className="text-gold">Abubakr</span>
-          <span
-            className={cn(
-              "ml-1.5 transition-colors",
-              solid ? "text-text-primary" : "text-white",
-            )}
-          >
-            {/* Full name on desktop, shortened on small screens */}
-            <span className="hidden sm:inline">Chadhar Rent a Car</span>
-            <span className="sm:hidden">Rent a Car</span>
+        {/* Brand — gold monogram + stacked wordmark */}
+        <Link href="/" className="flex shrink-0 items-center gap-2.5">
+          <span className="brand-fill grid h-9 w-9 place-items-center rounded-xl font-heading text-lg font-extrabold text-black shadow-md sm:h-10 sm:w-10">
+            A
+          </span>
+          <span className="flex flex-col leading-none">
+            <span
+              className={cn(
+                "font-heading text-base font-bold tracking-tight transition-colors sm:text-lg",
+                solid ? "text-text-primary" : "text-white",
+              )}
+            >
+              Abubakr Chadhar
+            </span>
+            <span
+              className={cn(
+                "mt-0.5 text-[0.62rem] font-semibold uppercase tracking-[0.2em] transition-colors",
+                solid ? "text-text-muted" : "text-white/70",
+              )}
+            >
+              Rent a Car
+            </span>
           </span>
         </Link>
 
@@ -71,16 +78,12 @@ export function Navbar() {
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
-          <ThemeToggle
-            className={cn(
-              !solid && "border-white/25 bg-white/10 text-white hover:text-white",
-            )}
-          />
+          <ThemeToggle />
           <a
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full bg-whatsapp px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-whatsapp/20 transition-colors hover:bg-whatsapp-hover lg:inline-flex"
+            className="glass-whatsapp glass-sheen hidden items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold lg:inline-flex"
           >
             <WhatsAppIcon className="h-4 w-4" />
             WhatsApp Us

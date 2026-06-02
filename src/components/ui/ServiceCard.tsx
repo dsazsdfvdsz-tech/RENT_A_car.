@@ -44,7 +44,7 @@ export function ServiceCard({ service }: { service: Service }) {
           href={inquireLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-whatsapp-hover"
+          className="glass-whatsapp glass-sheen inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold"
         >
           <WhatsAppIcon className="h-4 w-4" />
           Inquire

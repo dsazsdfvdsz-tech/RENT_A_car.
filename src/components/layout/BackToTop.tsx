@@ -28,7 +28,7 @@ export function BackToTop() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
-          className="fixed bottom-[9rem] right-4 z-40 grid h-11 w-11 place-items-center rounded-full border border-border bg-bg-card/90 text-text-secondary shadow-lg backdrop-blur transition-colors hover:text-gold lg:bottom-24 lg:right-6"
+          className="glass glass-interactive fixed bottom-[10rem] right-4 z-40 grid h-11 w-11 place-items-center rounded-full text-text-secondary hover:text-gold lg:bottom-24 lg:right-6"
         >
           <ArrowUp className="h-5 w-5" />
         </motion.button>

@@ -18,7 +18,7 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Chat with us on WhatsApp at ${siteConfig.contact.whatsapp}`}
-      className="fixed bottom-[5.5rem] right-4 z-50 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-white shadow-lg lg:bottom-6 lg:right-6"
+      className="glass-whatsapp glass-sheen fixed bottom-[6.5rem] right-4 z-50 grid h-14 w-14 place-items-center rounded-full lg:bottom-6 lg:right-6"
       initial={reduce ? undefined : { scale: 0.9, opacity: 0 }}
       animate={
         reduce

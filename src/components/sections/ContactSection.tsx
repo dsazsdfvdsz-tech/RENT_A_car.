@@ -37,14 +37,14 @@ export function ContactSection() {
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-5 py-4 font-semibold text-white transition-colors hover:bg-whatsapp-hover"
+                className="glass-whatsapp glass-sheen inline-flex items-center justify-center gap-2 rounded-xl px-5 py-4 font-semibold"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 WhatsApp Us
               </a>
               <a
                 href={telLink}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-gold px-5 py-4 font-semibold text-gold transition-colors hover:bg-gold hover:text-black"
+                className="glass-gold glass-sheen inline-flex items-center justify-center gap-2 rounded-xl px-5 py-4 font-semibold"
               >
                 <Phone className="h-5 w-5" />
                 Call Now

@@ -93,7 +93,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-whatsapp px-6 py-3.5 font-semibold text-white transition-colors hover:bg-whatsapp-hover disabled:opacity-60"
+        className="glass-whatsapp glass-sheen inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3.5 font-semibold disabled:opacity-60"
       >
         <WhatsAppIcon className="h-5 w-5" />
         Send Inquiry via WhatsApp

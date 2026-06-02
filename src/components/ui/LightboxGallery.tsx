@@ -49,30 +49,22 @@ export function LightboxGallery({ vehicle, onClose }: LightboxGalleryProps) {
           />
 
           <motion.div
-            className="relative z-10 max-h-[90vh] w-full max-w-3xl overflow-y-auto overscroll-contain rounded-2xl border border-white/10 bg-bg-card shadow-2xl"
+            className="relative z-10 max-h-[90vh] w-full max-w-3xl overflow-y-auto overscroll-contain rounded-2xl border border-white/10 bg-bg-card shadow-2xl [-webkit-overflow-scrolling:touch]"
             initial={{ scale: 0.92, y: 20, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.95, y: 10, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            drag="y"
-            dragConstraints={{ top: 0, bottom: 0 }}
-            dragElastic={{ top: 0, bottom: 0.6 }}
-            onDragEnd={(_, info) => {
-              if (info.offset.y > 140) onClose();
-            }}
           >
-            {/* Close button */}
+            {/* Close button — fixed to the viewport so it stays reachable
+                while the dialog content scrolls on mobile */}
             <button
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className="absolute right-3 top-3 z-20 grid h-10 w-10 place-items-center rounded-full bg-black/50 text-white backdrop-blur transition-colors hover:bg-black/70"
+              className="fixed right-5 top-5 z-30 grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/55 text-white backdrop-blur transition-colors hover:bg-black/75"
             >
               <X className="h-5 w-5" />
             </button>
-
-            {/* Mobile drag handle */}
-            <div className="absolute left-1/2 top-2 z-20 h-1.5 w-12 -translate-x-1/2 rounded-full bg-white/40 sm:hidden" />
 
             <div className="relative aspect-[4/3] w-full bg-bg-secondary">
               <Image
@@ -120,7 +112,7 @@ export function LightboxGallery({ vehicle, onClose }: LightboxGalleryProps) {
                   href={vehicleInquiryLink(vehicle.name)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-whatsapp px-5 py-3 font-semibold text-white transition-colors hover:bg-whatsapp-hover"
+                  className="glass-whatsapp glass-sheen inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
                   Inquire on WhatsApp
@@ -128,7 +120,7 @@ export function LightboxGallery({ vehicle, onClose }: LightboxGalleryProps) {
                 <Link
                   href={`/fleet#${vehicle.id}`}
                   onClick={onClose}
-                  className="inline-flex items-center justify-center gap-1 rounded-xl border border-border px-5 py-3 font-semibold text-gold transition-colors hover:border-gold hover:bg-gold-light"
+                  className="glass-gold glass-sheen inline-flex items-center justify-center gap-1 rounded-xl px-5 py-3 font-semibold"
                 >
                   Full Details
                   <ArrowRight className="h-4 w-4" />

@@ -47,7 +47,7 @@ export function MobileBottomNav() {
                   type="button"
                   aria-label="Close menu"
                   onClick={() => setMenuOpen(false)}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-bg-secondary text-text-secondary"
+                  className="glass glass-interactive grid h-10 w-10 place-items-center rounded-full text-text-secondary"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -79,13 +79,13 @@ export function MobileBottomNav() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-4 py-3 font-semibold text-white"
+                  className="glass-whatsapp glass-sheen flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold"
                 >
                   <WhatsAppIcon className="h-5 w-5" /> WhatsApp
                 </a>
                 <a
                   href={telLink}
-                  className="flex items-center justify-center gap-2 rounded-xl border border-gold px-4 py-3 font-semibold text-gold"
+                  className="glass-gold glass-sheen flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold"
                 >
                   <Phone className="h-5 w-5" /> Call
                 </a>
@@ -95,12 +95,12 @@ export function MobileBottomNav() {
         )}
       </AnimatePresence>
 
-      {/* Fixed bottom tab bar */}
+      {/* Fixed bottom tab bar — full-width edge-to-edge glass */}
       <nav
         aria-label="Primary"
-        className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-bg-primary/95 backdrop-blur-xl pb-[env(safe-area-inset-bottom)] lg:hidden"
+        className="glass-bar fixed inset-x-0 bottom-0 z-50 pb-[env(safe-area-inset-bottom)] lg:hidden"
       >
-        <div className="mx-auto grid max-w-md grid-cols-5 items-end gap-1 px-2 pt-1.5">
+        <div className="mx-auto grid max-w-md grid-cols-5 items-end gap-1 px-2 pb-1 pt-1.5">
           <TabLink href="/" label="Home" active={isHome}>
             <House className="h-5 w-5" />
           </TabLink>
@@ -115,7 +115,7 @@ export function MobileBottomNav() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Chat on WhatsApp ${siteConfig.contact.whatsapp}`}
-              className="-mt-6 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-white shadow-lg shadow-whatsapp/40 ring-4 ring-bg-primary transition-transform active:scale-95"
+              className="glass-whatsapp glass-sheen -mt-7 grid h-14 w-14 place-items-center rounded-full ring-4 ring-bg-primary/60"
             >
               <WhatsAppIcon className="h-7 w-7" />
             </a>

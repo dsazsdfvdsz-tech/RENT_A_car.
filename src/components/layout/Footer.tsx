@@ -48,7 +48,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-white/5 text-slate-300 transition-colors hover:bg-gold hover:text-black"
+                  className="glass glass-interactive grid h-10 w-10 place-items-center rounded-full text-slate-300 hover:text-gold"
                 >
                   <Icon className="h-5 w-5" />
                 </a>

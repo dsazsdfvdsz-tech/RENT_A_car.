@@ -43,7 +43,7 @@ export function RouteCard({ route, priority = false }: RouteCardProps) {
         href={quoteLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 border-t border-border px-4 py-3.5 text-sm font-semibold text-whatsapp transition-colors hover:bg-whatsapp hover:text-white"
+        className="glass-whatsapp glass-sheen m-3 inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold"
       >
         <WhatsAppIcon className="h-4 w-4" />
         Get Quote on WhatsApp
