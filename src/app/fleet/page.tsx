@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Calendar, Cog, Fuel, Phone, Snowflake, Users } from "lucide-react";
 import { fleet } from "@/data/fleet";
-import { formatRate, telLink, vehicleInquiryLink } from "@/lib/utils";
+import { formatRate, telLink, vehicleInquiryLink, asset } from "@/lib/utils";
 import { FadeInOnScroll } from "@/components/animations/FadeInOnScroll";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
@@ -47,7 +47,7 @@ export default function FleetPage() {
             <article className="grid items-center gap-8 rounded-2xl border border-border bg-bg-card p-5 shadow-[var(--card-shadow)] lg:grid-cols-2 lg:p-8">
               <div className="overflow-hidden rounded-xl bg-bg-secondary">
                 <Image
-                  src={vehicle.image}
+                  src={asset(vehicle.image)}
                   alt={`${vehicle.name} available for rent in Lahore`}
                   width={800}
                   height={600}

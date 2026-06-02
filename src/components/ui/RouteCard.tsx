@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Route } from "@/data/routes";
-import { routeQuoteLink } from "@/lib/utils";
+import { routeQuoteLink, asset } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
 interface RouteCardProps {
@@ -28,7 +28,7 @@ export function RouteCard({ route, priority = false }: RouteCardProps) {
         className="relative block aspect-[3/2] w-full overflow-hidden bg-bg-secondary"
       >
         <Image
-          src={route.image}
+          src={asset(route.image)}
           alt={`Car rental from Lahore to ${route.destination}`}
           width={1200}
           height={800}

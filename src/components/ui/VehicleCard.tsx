@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Expand } from "lucide-react";
 import type { Vehicle } from "@/data/fleet";
-import { vehicleInquiryLink } from "@/lib/utils";
+import { vehicleInquiryLink, asset } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
 interface VehicleCardProps {
@@ -39,7 +39,7 @@ export function VehicleCard({ vehicle, onOpen, priority = false }: VehicleCardPr
         className="relative block aspect-[4/3] w-full overflow-hidden bg-bg-secondary"
       >
         <Image
-          src={vehicle.image}
+          src={asset(vehicle.image)}
           alt={`${vehicle.name} available for rent in Lahore`}
           width={800}
           height={600}

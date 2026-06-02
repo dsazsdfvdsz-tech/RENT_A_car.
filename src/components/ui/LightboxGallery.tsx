@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Users, Cog, Fuel, Snowflake, Calendar, X } from "lucide-react";
 import { useEffect } from "react";
 import type { Vehicle } from "@/data/fleet";
-import { formatRate, vehicleInquiryLink } from "@/lib/utils";
+import { formatRate, vehicleInquiryLink, asset } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
 interface LightboxGalleryProps {
@@ -68,7 +68,7 @@ export function LightboxGallery({ vehicle, onClose }: LightboxGalleryProps) {
 
             <div className="relative aspect-[4/3] w-full bg-bg-secondary">
               <Image
-                src={vehicle.image}
+                src={asset(vehicle.image)}
                 alt={`${vehicle.name} available for rent in Lahore`}
                 width={800}
                 height={600}

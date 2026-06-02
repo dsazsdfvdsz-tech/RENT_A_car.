@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Clock, ShieldCheck, UserCheck, Wallet } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
-import { telLink, whatsappLink } from "@/lib/utils";
+import { telLink, whatsappLink, asset } from "@/lib/utils";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { FadeInOnScroll } from "@/components/animations/FadeInOnScroll";
 import { ParallaxBackground } from "@/components/animations/ParallaxBackground";
@@ -56,7 +56,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden border-b border-border">
         <ParallaxBackground className="absolute inset-0" strength={50}>
           <Image
-            src="/images/hero/hero-bg.jpg"
+            src={asset("/images/hero/hero-bg.jpg")}
             alt="Abubakr Chadhar Rent a Car premium fleet in Lahore"
             fill
             priority

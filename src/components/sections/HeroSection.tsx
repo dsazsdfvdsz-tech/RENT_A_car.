@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
-import { telLink, whatsappLink } from "@/lib/utils";
+import { telLink, whatsappLink, asset } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/ui/icons";
 
 export function HeroSection() {
@@ -27,7 +27,7 @@ export function HeroSection() {
     >
       {/* Background image (LCP — eager + high priority) */}
       <Image
-        src="/images/hero/hero-bg.jpg"
+        src={asset("/images/hero/hero-bg.jpg")}
         alt="Luxury car available for rent in Lahore"
         fill
         priority

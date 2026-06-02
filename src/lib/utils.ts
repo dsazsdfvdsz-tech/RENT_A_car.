@@ -84,3 +84,10 @@ export function contactFormMailto(data: {
 export function formatRate(rate: number): string {
   return `Rs ${rate.toLocaleString("en-PK")}`;
 }
+
+/** Prefix a public asset path (e.g. "/images/...") with the deployment base path. */
+const ASSET_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+export function asset(path: string): string {
+  if (!path || !path.startsWith("/")) return path;
+  return `${ASSET_BASE_PATH}${path}`;
+}
